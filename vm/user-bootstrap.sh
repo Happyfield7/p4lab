@@ -114,9 +114,9 @@ cd ../..
 
 # --- Tutorials --- #
 sudo pip install crcmod
-git clone https://github.com/p4lang/tutorials
+git clone https://github.com/Happyfield7/p4lab
 sudo mv tutorials /home/p4
-sudo chown -R p4:p4 /home/p4/tutorials
+sudo chown -R p4:p4 /home/p4/p4lab
 
 # --- Emacs --- #
 sudo cp p4_16-mode.el /usr/share/emacs/site-lisp/
