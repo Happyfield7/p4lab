@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The objective of this tutorial is to extend basic L3 forwarding with a
+The objective of this exercise is to extend basic L3 forwarding with a
 scaled-down version of In-Band Network Telemetry (INT), which we call
 Multi-Hop Route Inspection (MRI).
 
@@ -15,9 +15,6 @@ queue length of the port at switch.
 
 As before, we have already defined the control plane rules, so you
 only need to implement the data plane logic of your P4 program.
-
-> **Spoiler alert:** There is a reference solution in the `solution`
-> sub-directory. Feel free to compare your implementation to the reference.
 
 ## Step 1: Run the (incomplete) starter code
 

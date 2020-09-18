@@ -16,10 +16,6 @@ last entry of stack.  Then at ingress, it should pop an entry from the
 stack and set the egress port accordingly. The last hop may also
 revert back the etherType to `TYPE_IPV4`.
 
-> **Spoiler alert:** There is a reference solution in the `solution`
-> sub-directory. Feel free to compare your implementation to the
-> reference.
-
 ## Step 1: Run the (incomplete) starter code
 
 The directory with this README also contains a skeleton P4 program,
@@ -88,8 +84,8 @@ A complete `source_routing.p4` will contain the following components:
 	2. remove the first entry of srcRoutes
 5. A control with an `apply` block that:
     1. checks the existence of source routes.
-    2. **TODO:** if statement to change etherent.etherType if it is the last hop
-    3. **TODO:** call srcRoute_nhop action
+    2. **TODO:** if statement to change ethernet.etherType if it is the last hop
+    3. **TODO:** choose next hop and remove top of srcRoutes stack
 6. A deparser that selects the order in which fields inserted into the outgoing
    packet.
 7. A `package` instantiation supplied with the parser, control, and deparser.
@@ -144,4 +140,4 @@ mn -c
 ## Next Steps
 
 Congratulations, your implementation works! Move on to
-[Load Balance](../load_balance).
+[Firewall](../firewall).

@@ -78,8 +78,9 @@ parser MyParser(packet_in packet,
     state parse_srcRouting {
         /*
          * TODO: extract the next entry of hdr.srcRoutes
-         * while hdr.srcRoutes.last.bos is 0 transition to this state
-         * otherwise parse ipv4
+         * Modify the next line to go back to this state while the
+         * last (previous) entry was not the bottom of stack
+         * if it was the bottom of stack continue parsing ipv4
          */
         transition accept;
     }
@@ -115,9 +116,8 @@ control MyIngress(inout headers hdr,
     
     action srcRoute_nhop() {
         /*
-         * TODO: set standard_metadata.egress_spec 
-         * to the port in hdr.srcRoutes[0] and
-         * pop an entry from hdr.srcRoutes
+         * TODO: set the egress port for the next hop
+         * and remove the first entry of srcRoutes
          */
     }
 
@@ -132,9 +132,8 @@ control MyIngress(inout headers hdr,
     apply {
         if (hdr.srcRoutes[0].isValid()){
             /*
-             * TODO: add logic to:
-             * - If final srcRoutes (top of stack has bos==1):
-             *   - change etherType to IP
+             * TODO: add logic:
+             * - change etherType if it is the last hop
              * - choose next hop and remove top of srcRoutes stack
              */
 

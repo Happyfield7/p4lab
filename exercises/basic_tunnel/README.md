@@ -11,13 +11,8 @@ instead decides the destination port using a new tunnel header.
 The new header type will contain a protocol ID, which indicates the type of
 packet being encapsulated, along with a destination ID to be used for routing.
 
-
-> **Spoiler alert:** There is a reference solution in the `solution`
-> sub-directory. Feel free to compare your implementation to the reference.
-
 The starter code for this assignment is in a file called `basic_tunnel.p4` and
 is simply the solution to the IP router from the previous exercise.
-
 
 ### A note about the control plane
 
@@ -185,5 +180,5 @@ make stop
 ## Next Steps
 
 Congratulations, your implementation works! Move onto the next assignment
-[p4runtime](../p4runtime)!
+[P4Runtime](../p4runtime)!
 

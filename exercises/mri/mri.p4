@@ -202,7 +202,7 @@ control MyEgress(inout headers hdr,
         /*
         * TODO: add logic to:
         - Increment hdr.mri.count by 1
-        - Add a new swtrace header by calling push_front(1) on hdr.swtraces.
+        - Add a new swtrace header by calling push_front(1) on hdr.swtraces and set it to be valid.
         - Set hdr.swtraces[0].swid to the id parameter
         - Set hdr.swtraces[0].qdepth to (qdepth_t)standard_metadata.deq_qdepth
         - Increment hdr.ipv4.ihl by 2

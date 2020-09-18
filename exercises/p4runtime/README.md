@@ -13,10 +13,6 @@ You will use the starter program, `mycontroller.py`, and a few helper
 libraries in the `p4runtime_lib` directory to create the table entries
 necessary to tunnel traffic between host 1 and 2.
 
-> **Spoiler alert:** There is a reference solution in the `solution`
-> sub-directory. Feel free to compare your implementation to the
-> reference.
-
 ## Step 1: Run the (incomplete) starter code
 
 The starter code for this assignment is in a file called `mycontroller.py`,
@@ -145,7 +141,7 @@ you will just need to run the following in your second shell:
 You should start to see ICMP replies in your Mininet prompt, and you should start to
 see the values for all counters start to increment.
 
-### Extra Credit and Food for Thought 
+### Extra's (not graded) and Food for Thought 
 
 You might notice that the rules that are printed by `mycontroller.py` contain the entity
 IDs rather than the table names. You can use the P4Info helper to translate these IDs
@@ -160,10 +156,6 @@ need to change it for a more realistic network?
 - What is the TTL in the ICMP replies? Why is it the value that it is?
 Hint: The default TTL is 64 for packets sent by the hosts.
 
-If you are interested, you can find the protocol buffer and gRPC definitions here:
-- [P4Runtime](https://github.com/p4lang/PI/blob/master/proto/p4/p4runtime.proto)
-- [P4Info](https://github.com/p4lang/PI/blob/master/proto/p4/config/p4info.proto)
-
 #### Cleaning up Mininet
 
 If the Mininet shell crashes, it may leave a Mininet instance
@@ -172,17 +164,8 @@ running in the background. Use the following command to clean up:
 make clean
 ```
 
-#### Running the reference solution
-
-To run the reference solution, you should run the following command from the
-`~/tutorials/P4D2_2017_Fall/exercises/p4runtime` directory:
-```bash
-solution/my_controller.py
-```
-
-
 ## Next Steps
 
 Congratulations, your implementation works! Move onto the next assignment
-[mri](../mri)!
+[ecn](../ecn)!
 
